@@ -104,15 +104,15 @@ const Home = () => {
               data.docs.forEach((u) => {
                 if (
                   u.data().email !== user.email &&
-                  u.data().email != "mihir0699@gmail.com"
+                  u.data().email != "ivanshajpoonia@gmail.com"
                 )
                   x.push(u.data());
               });
               x.sort(func);
-              if (!user?.following?.includes("mihir0699@gmail.com")) {
+              if (!user?.following?.includes("ivanshajpoonia@gmail.com")) {
                 firebase
                   .firestore()
-                  .doc(`/users/mihir0699@gmail.com`)
+                  .doc(`/users/ivanshajpoonia@gmail.com`)
                   .get()
                   .then((data) => {
                     x.unshift(data.data());
@@ -138,14 +138,14 @@ const Home = () => {
               data.docs.forEach((u) => {
                 if (
                   u.data().email != user.email &&
-                  u.data().email != "mihir0699@gmail.com"
+                  u.data().email != "ivanshajpoonia@gmail.com"
                 )
                   x.push(u.data());
               });
-              if (!user?.following?.includes("mihir0699@gmail.com")) {
+              if (!user?.following?.includes("ivanshajpoonia@gmail.com")) {
                 firebase
                   .firestore()
-                  .doc(`/users/mihir0699@gmail.com`)
+                  .doc(`/users/ivanshajpoonia@gmail.com`)
                   .get()
                   .then((data) => {
                     x.unshift(data.data());

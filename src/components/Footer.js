@@ -5,7 +5,7 @@ const Footer = () => {
     <footer>
       <div className="footer">
         Made with <HeartTwoTone twoToneColor="#eb2f96" /> By{" "}
-        <a href="https://github.com/mihir0699/Instagram-Clone">Mihir Gupta</a>
+        <a href="https://github.com/VanshajPoonia/Instagram-Clone">Vanshaj Poonia</a>
       </div>
     </footer>
   );

@@ -392,7 +392,7 @@ const Post = (props) => {
                 </Link>
               </div>
               {(user.email === post.email ||
-                user.email == "ivanshajpoonia@gmail.com") && (
+                user.email === "ivanshajpoonia@gmail.com") && (
                 <Popconfirm
                   placement="top"
                   title="Delete this post?"
@@ -418,7 +418,7 @@ const Post = (props) => {
           </div>
           <div className="bio_grid">
             {owner.photoURL ? (
-              <img src={owner.photoURL} className="image_circle1" />
+              <img src={owner.photoURL} className="image_circle1" alt ="pic"/>
             ) : (
               <img src={UserImage} className="image_circle1" />
             )}

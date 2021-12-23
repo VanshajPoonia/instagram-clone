@@ -46,7 +46,7 @@ const Home = () => {
   const handleUnFollow1 = (userEmail) => {
     let following = user.following;
     following = following.filter((user1) => {
-      return !(user1 == userEmail);
+      return !(user1 === userEmail);
     });
     firebase
       .firestore()
@@ -63,7 +63,7 @@ const Home = () => {
           .then((data) => {
             let followers = data.data().followers;
             followers = followers.filter((user2) => {
-              return !(user2 == user.email);
+              return !(user2 === user.email);
             });
             firebase.firestore().doc(`/users/${userEmail}`).update({
               followers: followers,
@@ -104,7 +104,7 @@ const Home = () => {
               data.docs.forEach((u) => {
                 if (
                   u.data().email !== user.email &&
-                  u.data().email != "ivanshajpoonia@gmail.com"
+                  u.data().email !== "ivanshajpoonia@gmail.com"
                 )
                   x.push(u.data());
               });
@@ -137,8 +137,8 @@ const Home = () => {
               let x = [];
               data.docs.forEach((u) => {
                 if (
-                  u.data().email != user.email &&
-                  u.data().email != "ivanshajpoonia@gmail.com"
+                  u.data().email !== user.email &&
+                  u.data().email !== "ivanshajpoonia@gmail.com"
                 )
                   x.push(u.data());
               });

@@ -45,7 +45,7 @@ const Login = (props) => {
       .firestore()
       .collection("users")
       .where("email", "==", e.target.value)
-      .limit(1)
+      .limit(2)
       .get()
       .then((data) => {
         if (!data.docs.length) {
